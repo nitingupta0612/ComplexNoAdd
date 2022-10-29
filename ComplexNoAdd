@@ -3,30 +3,30 @@ using namespace std;
 class complex
 {
 	private:
-		int r,m;
+		int real,imag;
 		public:
-			void get()
+			void getdata()
 			{
 				cout<<"Enter real and imaginary part of complex number : ";
-				cin>>r>>m;
+				cin>>real>>imag;
 			}
 			void disp()
 			{
-				cout<<r<<"+"<<m<<"i";
+				cout<<real<<"+"<<imag<<"i";
 			}
 			complex operator + (complex o)
 			{
 				complex s;
-				s.r=r+o.r;
-				s.m=m+o.m;
+				s.real=real+o.real;
+				s.imag=imag+o.imag;
 				return s;
 			}
 };
 int main()
 {
 	complex p,q,z;
-	p.get();
-	q.get();
+	p.getdata();
+	q.getdata();
 	z=p+q;
 	z.disp();
 	return 0;
